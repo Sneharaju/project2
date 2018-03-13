@@ -17,7 +17,8 @@ app.config(function($routeProvider){
 		controller:'UserController'
 	})
 	.when('/home',{
-		templateUrl:'views/home.html'
+		templateUrl:'views/home.html',
+		controller:'NotificationController'
 	})
 	.when('/addjob',{
 		templateUrl:'views/jobform.html',
@@ -48,7 +49,17 @@ app.config(function($routeProvider){
 		templateUrl:'views/blogpostdetail.html',
 		controller:'BlogPostDetailController'
 	})
-
+	
+	.when('/getapprovalform/:id',{
+		templateUrl:'views/approvalform.html',
+		controller:'BlogPostDetailController'
+	})
+	.when('/getnotification/:id',{
+		templateUrl:'views/notificationdetails.html',
+		controller:'NotificationController'
+	})
+	
+	
 	
 	.otherwise({
 		templateUrl:'views/login.html',
